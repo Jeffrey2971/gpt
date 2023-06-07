@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>课程列表 & 视频观看进度</title>
+
+    <style>
+        .video-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .semester-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ccc;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .collapsed {
+            display: none;
+        }
+    </style>
+
+    <script>
+        function toggleSemester(element) {
+            var semesterContent = element.nextElementSibling;
+            semesterContent.classList.toggle("collapsed");
+        }
+
+        var waitingLearn = 0;
+    </script>
+</head>
+<body>
+<div>
+    <h1 style="text-align: center">课程列表 &amp; 视频观看进度</h1>
+    <div>
+        <div class="semester">
+            <h3 class="semester-button" onclick="toggleSemester(this)"><span>第一学期</span></h3>
+            <div class="semester-content collapsed">
+                <ul>
+                    <li>
+                        <p><span>课程：马克思主义基本原理概论</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                    <li>
+                        <p><span>课程：大学英语(5)★</span></p>
+                        <ul>
+
+                        </ul>
+                        <p></p>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季大学英语(5)★-下午(4月9日)</p>
+
+                                    <p>视频总时长：3时20分14秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季大学英语(5)★-上午(4月9日)</p>
+
+                                    <p>视频总时长：3时9分6秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季大学英语(5)★-下午(3月26日)</p>
+
+                                    <p>视频总时长：3时6分24秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季大学英语(5)★-上午(3月26日)</p>
+
+                                    <p>视频总时长：2时49分54秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季大学英语(5)★-下午(3月18日)</p>
+
+                                    <p>视频总时长：4时40分30秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季大学英语(5)★-下午(3月5日)</p>
+
+                                    <p>视频总时长：2时49分9秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季大学英语(5)★-上午(3月5日)</p>
+
+                                    <p>视频总时长：2时11分19秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><span>课程：C语言程序设计★</span></p>
+                        <ul>
+
+                        </ul>
+                        <p></p>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季C语言程序设计★-下午(4月15日)</p>
+
+                                    <p>视频总时长：3时23分2秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季C语言程序设计★-上午(4月15日)</p>
+
+                                    <p>视频总时长：2时30分35秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季C语言程序设计★-下午(4月2日)</p>
+
+                                    <p>视频总时长：3时20分4秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季C语言程序设计★-上午(4月2日)</p>
+
+                                    <p>视频总时长：2时32分24秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季C语言程序设计★-下午(3月19日)</p>
+
+                                    <p>视频总时长：3时24分42秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季C语言程序设计★-上午(3月19日)</p>
+
+                                    <p>视频总时长：2时24分6秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季C语言程序设计★-下午(3月11日)</p>
+
+                                    <p>视频总时长：3时30分17秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季C语言程序设计★-上午(3月11日)</p>
+
+                                    <p>视频总时长：2时40分6秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季C语言程序设计★-下午(3月4日)</p>
+
+                                    <p>视频总时长：2时57分48秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季C语言程序设计★-上午(3月4日)</p>
+
+                                    <p>视频总时长：2时22分30秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：暨大2023年春季C语言程序设计★下午</p>
+
+                                    <p>视频总时长：1时30分16秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><span>课程：计算机网络</span></p>
+                        <ul>
+
+                        </ul>
+                        <p></p>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季计算机网络-下午(6月4日)</p>
+
+                                    <p>视频总时长：3时40分21秒</p>
+
+                                    <p style="color: coral">视频观看进度：0时3分30秒</p>
+
+                                    <script>
+                                        waitingLearn += 13011
+                                    </script>
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季计算机网络-上午(6月4日)</p>
+
+                                    <p>视频总时长：2时38分37秒</p>
+
+                                    <p style="color: coral">视频观看进度：0时0分0秒</p>
+
+                                    <script>
+                                        waitingLearn += 9517
+                                    </script>
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季计算机网络-下午(6月3日)</p>
+
+                                    <p>视频总时长：3时42分22秒</p>
+
+                                    <p style="color: coral">视频观看进度：0时0分10秒</p>
+
+                                    <script>
+                                        waitingLearn += 13332
+                                    </script>
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季计算机网络-上午(6月3日)</p>
+
+                                    <p>视频总时长：2时42分13秒</p>
+
+                                    <p style="color: coral">视频观看进度：0时0分0秒</p>
+
+                                    <script>
+                                        waitingLearn += 9733
+                                    </script>
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季计算机网络-下午(4月22日)</p>
+
+                                    <p>视频总时长：3时8分52秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季计算机网络-上午(4月22日)</p>
+
+                                    <p>视频总时长：2时36分23秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季计算机网络-下午(3月25日)</p>
+
+                                    <p>视频总时长：3时30分4秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <div class="video-container">
+                                    <p>视频名称：2023年春季计算机网络-上午(3月25日)</p>
+
+                                    <p>视频总时长：2时35分38秒</p>
+                                    <p style="color: green">
+                                        视频观看进度：视频已看完</p>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="semester">
+            <h3 class="semester-button" onclick="toggleSemester(this)"><span>第三学期</span></h3>
+            <div class="semester-content collapsed">
+                <ul>
+                    <li>
+                        <p><span>课程：大学英语(7)★</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                    <li>
+                        <p><span>课程：Python 程序设计</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                    <li>
+                        <p><span>课程：Java 程序设计</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="semester">
+            <h3 class="semester-button" onclick="toggleSemester(this)"><span>第二学期</span></h3>
+            <div class="semester-content collapsed">
+                <ul>
+                    <li>
+                        <p><span>课程：大学英语(6)★</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                    <li>
+                        <p><span>课程：UNIX 应用</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                    <li>
+                        <p><span>课程：数据结构</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                    <li>
+                        <p><span>课程：软件项目管理</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="semester">
+            <h3 class="semester-button" onclick="toggleSemester(this)"><span>第五学期</span></h3>
+            <div class="semester-content collapsed">
+                <ul>
+                    <li>
+                        <p><span>课程：形势与政策★</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                    <li>
+                        <p><span>课程：毕业论文写作★</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                    <li>
+                        <p><span>课程：PyTorch 应用</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                    <li>
+                        <p><span>课程：Tensorflow 应用</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                    <li>
+                        <p><span>课程：MS.NET 开发与应用</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                    <li>
+                        <p><span>课程：Android 手机开发</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="semester">
+            <h3 class="semester-button" onclick="toggleSemester(this)"><span>第六学期</span></h3>
+            <div class="semester-content collapsed">
+                <ul>
+                    <li>
+                        <p><span>课程：毕业论文★</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="semester">
+            <h3 class="semester-button" onclick="toggleSemester(this)"><span>第四学期</span></h3>
+            <div class="semester-content collapsed">
+                <ul>
+                    <li>
+                        <p><span>课程：毛泽东思想和中国特色社会主义理论体系概论★</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                    <li>
+                        <p><span>课程：Oracle 数据库及其应用</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                    <li>
+                        <p><span>课程：计算机组网技术</span></p>
+                        <p>
+                        </p><ul>
+                        <li style="color: darkgray">这个课程没有开放学习视频
+                        </li>
+                    </ul>
+                        <p></p>
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="text-align: center">
+
+    <a href="#" id="pay" style="font-size: 32px;text-decoration: none "></a>
+
+</div>
+
+<!--取消掉以下注释代码后原本的列表样式会发生变化，请问怎么使以下代码正确运行的-->
+
+
+<!--<link href="//unpkg.com/layui@2.8.4/dist/css/layui.css" rel="stylesheet">-->
+<!--<script src="//unpkg.com/layui@2.8.4/dist/layui.js"></script>-->
+
+<!--<script>-->
+<!--    layui.use(function(){-->
+<!--        var $ = layui.$;-->
+<!--        var layer = layui.layer;-->
+<!--        var util = layui.util;-->
+<!--        var form = layui.form;-->
+<!--        // 事件-->
+<!--        util.on('lay-on', {-->
+<!--            'test-page-custom': function(){-->
+<!--                layer.open({-->
+<!--                    type: 1,-->
+<!--                    area: ['550px', '350px'],-->
+<!--                    resize: false,-->
+<!--                    shadeClose: false,-->
+<!--                    title: '请先登陆',-->
+<!--                    content: `-->
+<!--          <div class="layui-fluid">-->
+<!--  <div class="layui-row">-->
+<!--    <div class="layui-col-md-offset2 layui-col-md8 login">-->
+<!--      <div class="layui-tab layui-tab-brief">-->
+<!--        <ul class="layui-tab-title">-->
+<!--          <li class="layui-this">账号密码登陆</li>-->
+<!--          <li>手机验证码登陆</li>-->
+<!--        </ul>-->
+<!--        <div class="layui-tab-content">-->
+<!--          <div class="layui-tab-item layui-show">-->
+<!--            <form action="" class="layui-form layui-form-pane">-->
+<!--              <div class="layui-form-item">-->
+<!--                <label class="layui-form-label"><i class="layui-icon layui-icon-user"></i></label>-->
+<!--                <div class="layui-input-block">-->
+<!--                  <input type="text" name="username"  lay-verify="required|username" class="layui-input" placeholder="用户名">-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="layui-form-item">-->
+<!--                <label class="layui-form-label"><i class="layui-icon layui-icon-password"></i></label>-->
+<!--                <div class="layui-input-block">-->
+<!--                  <input type="password" name="password" required lay-verify="required|password" class="layui-input" placeholder="密码">-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="layui-form-item">-->
+<!--                <button class="layui-btn" lay-submit>登录</button>-->
+<!--              </div>-->
+<!--            </form>-->
+<!--          </div>-->
+
+<!--          <div class="layui-tab-item">-->
+<!--            <form action="" class="layui-form layui-form-pane">-->
+<!--              <div class="layui-form-item">-->
+<!--                <label class="layui-form-label"><i class="layui-icon layui-icon-cellphone"></i></label>-->
+<!--                <div class="layui-input-block">-->
+<!--                  <input type="text" name="phone" required lay-verify="required|phone" class="layui-input" placeholder="手机号">-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="layui-form-item">-->
+<!--                <div class="layui-row layui-col-space20">-->
+<!--                  <div class="layui-col-md8 layui-col-xs8">-->
+<!--                    <input type="text" name="code2" required lay-verify="required" class="layui-input" placeholder="验证码">-->
+<!--                  </div>-->
+<!--                  <div class="layui-col-md4 layui-col-xs4">-->
+<!--                    <a class="layui-btn">发送验证码</a>-->
+<!--                  </div>-->
+
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="layui-form-item">-->
+<!--                <button class="layui-btn" lay-submit>登陆</button>-->
+<!--              </div>-->
+<!--            </form>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--        `,-->
+<!--                    success: function(){-->
+<!--                        // 对弹层中的表单进行初始化渲染-->
+<!--                        form.render();-->
+<!--                        // 表单提交事件-->
+<!--                        form.on('submit(demo-login)', function(data){-->
+<!--                            var field = data.field; // 获取表单字段值-->
+<!--                            // 显示填写结果，仅作演示用-->
+<!--                            layer.alert(JSON.stringify(field), {-->
+<!--                                title: '当前填写的字段值'-->
+<!--                            });-->
+<!--                            // 此处可执行 Ajax 等操作-->
+<!--                            // …-->
+<!--                            return false; // 阻止默认 form 跳转-->
+<!--                        });-->
+<!--                    }-->
+<!--                });-->
+<!--            }-->
+<!--        })-->
+<!--    });-->
+<!--</script>-->
+<!--<button type="button" class="layui-btn layui-btn-primary" lay-on="test-page-custom">显示登陆框</button>-->
+
+</body>
+<script>
+    let time = Math.floor(waitingLearn / 3600) + '小时' + Math.floor((waitingLearn % 3600) / 60) + '分' + waitingLearn / waitingLearn % 60 + '秒'
+    document.getElementById('pay').innerText = '剩余' + time + '的视频'
+</script>
+</html>
